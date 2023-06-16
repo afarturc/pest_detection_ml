@@ -561,3 +561,163 @@ Balanced accuracy score:
 ## CUSTOM
 
 ### RESNET 9 
+
+CPU times: user 15.1 s, sys: 46.6 s, total: 1min 1s
+Wall time: 56.1 s
+Epoch [0], last_lr: 0.00812, train_loss: 1.0336, val_loss: 1.1076, val_acc: 0.6997
+Epoch [1], last_lr: 0.00000, train_loss: 0.2143, val_loss: 0.0509, val_acc: 0.9836
+CPU times: user 12min 35s, sys: 14min 45s, total: 27min 21s
+Wall time: 26min 33s
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1         [-1, 64, 256, 256]           1,792
+       BatchNorm2d-2         [-1, 64, 256, 256]             128
+              ReLU-3         [-1, 64, 256, 256]               0
+            Conv2d-4        [-1, 128, 256, 256]          73,856
+       BatchNorm2d-5        [-1, 128, 256, 256]             256
+              ReLU-6        [-1, 128, 256, 256]               0
+         MaxPool2d-7          [-1, 128, 64, 64]               0
+            Conv2d-8          [-1, 128, 64, 64]         147,584
+       BatchNorm2d-9          [-1, 128, 64, 64]             256
+             ReLU-10          [-1, 128, 64, 64]               0
+           Conv2d-11          [-1, 128, 64, 64]         147,584
+      BatchNorm2d-12          [-1, 128, 64, 64]             256
+             ReLU-13          [-1, 128, 64, 64]               0
+           Conv2d-14          [-1, 256, 64, 64]         295,168
+      BatchNorm2d-15          [-1, 256, 64, 64]             512
+             ReLU-16          [-1, 256, 64, 64]               0
+        MaxPool2d-17          [-1, 256, 16, 16]               0
+           Conv2d-18          [-1, 512, 16, 16]       1,180,160
+      BatchNorm2d-19          [-1, 512, 16, 16]           1,024
+             ReLU-20          [-1, 512, 16, 16]               0
+        MaxPool2d-21            [-1, 512, 4, 4]               0
+           Conv2d-22            [-1, 512, 4, 4]       2,359,808
+      BatchNorm2d-23            [-1, 512, 4, 4]           1,024
+             ReLU-24            [-1, 512, 4, 4]               0
+           Conv2d-25            [-1, 512, 4, 4]       2,359,808
+      BatchNorm2d-26            [-1, 512, 4, 4]           1,024
+             ReLU-27            [-1, 512, 4, 4]               0
+        MaxPool2d-28            [-1, 512, 1, 1]               0
+          Flatten-29                  [-1, 512]               0
+           Linear-30                   [-1, 38]          19,494
+================================================================
+Total params: 6,589,734
+Trainable params: 6,589,734
+Non-trainable params: 0
+
+Epoch [0], last_lr: 0.00812, train_loss: 1.0336, val_loss: 1.1076, val_acc: 0.6997
+Epoch [1], last_lr: 0.00000, train_loss: 0.2143, val_loss: 0.0509, val_acc: 0.9836
+CPU times: user 12min 35s, sys: 14min 45s, total: 27min 21s
+Wall time: 26min 33s
+
+CPU times: user 15.1 s, sys: 46.6 s, total: 1min 1s
+Wall time: 56.1 s
+Epoch [0], last_lr: 0.00812, train_loss: 1.0336, val_loss: 1.1076, val_acc: 0.6997
+Epoch [1], last_lr: 0.00000, train_loss: 0.2143, val_loss: 0.0509, val_acc: 0.9836
+CPU times: user 12min 35s, sys: 14min 45s, total: 27min 21s
+Wall time: 26min 33s
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1         [-1, 64, 256, 256]           1,792
+       BatchNorm2d-2         [-1, 64, 256, 256]             128
+              ReLU-3         [-1, 64, 256, 256]               0
+            Conv2d-4        [-1, 128, 256, 256]          73,856
+       BatchNorm2d-5        [-1, 128, 256, 256]             256
+              ReLU-6        [-1, 128, 256, 256]               0
+         MaxPool2d-7          [-1, 128, 64, 64]               0
+            Conv2d-8          [-1, 128, 64, 64]         147,584
+       BatchNorm2d-9          [-1, 128, 64, 64]             256
+             ReLU-10          [-1, 128, 64, 64]               0
+           Conv2d-11          [-1, 128, 64, 64]         147,584
+      BatchNorm2d-12          [-1, 128, 64, 64]             256
+             ReLU-13          [-1, 128, 64, 64]               0
+           Conv2d-14          [-1, 256, 64, 64]         295,168
+      BatchNorm2d-15          [-1, 256, 64, 64]             512
+             ReLU-16          [-1, 256, 64, 64]               0
+        MaxPool2d-17          [-1, 256, 16, 16]               0
+           Conv2d-18          [-1, 512, 16, 16]       1,180,160
+      BatchNorm2d-19          [-1, 512, 16, 16]           1,024
+             ReLU-20          [-1, 512, 16, 16]               0
+        MaxPool2d-21            [-1, 512, 4, 4]               0
+           Conv2d-22            [-1, 512, 4, 4]       2,359,808
+      BatchNorm2d-23            [-1, 512, 4, 4]           1,024
+             ReLU-24            [-1, 512, 4, 4]               0
+           Conv2d-25            [-1, 512, 4, 4]       2,359,808
+      BatchNorm2d-26            [-1, 512, 4, 4]           1,024
+             ReLU-27            [-1, 512, 4, 4]               0
+        MaxPool2d-28            [-1, 512, 1, 1]               0
+          Flatten-29                  [-1, 512]               0
+           Linear-30                   [-1, 38]          19,494
+================================================================
+Total params: 6,589,734
+Trainable params: 6,589,734
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.75
+Forward/backward pass size (MB): 343.95
+Params size (MB): 25.14
+Estimated Total Size (MB): 369.83
+----------------------------------------------------------------
+None
+
+
+
+Classification Report: 
+
+                                                    precision    recall  f1-score   support
+
+                                Apple___Apple_scab       0.99      0.96      0.98       504
+                                 Apple___Black_rot       0.99      0.99      0.99       497
+                          Apple___Cedar_apple_rust       0.99      1.00      0.99       440
+                                   Apple___healthy       0.98      0.98      0.98       502
+                               Blueberry___healthy       0.98      0.99      0.99       454
+          Cherry_(including_sour)___Powdery_mildew       1.00      1.00      1.00       421
+                 Cherry_(including_sour)___healthy       0.99      1.00      1.00       456
+Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot       0.97      0.94      0.96       410
+                       Corn_(maize)___Common_rust_       1.00      1.00      1.00       477
+               Corn_(maize)___Northern_Leaf_Blight       0.95      0.98      0.97       477
+                            Corn_(maize)___healthy       1.00      1.00      1.00       465
+                                 Grape___Black_rot       0.99      0.99      0.99       472
+                      Grape___Esca_(Black_Measles)       0.99      1.00      0.99       480
+        Grape___Leaf_blight_(Isariopsis_Leaf_Spot)       1.00      1.00      1.00       430
+                                   Grape___healthy       1.00      1.00      1.00       423
+          Orange___Haunglongbing_(Citrus_greening)       0.99      0.99      0.99       503
+                            Peach___Bacterial_spot       0.98      0.99      0.98       459
+                                   Peach___healthy       0.99      1.00      0.99       432
+                     Pepper,_bell___Bacterial_spot       0.99      0.99      0.99       478
+                            Pepper,_bell___healthy       0.98      0.99      0.98       497
+                             Potato___Early_blight       0.98      1.00      0.99       485
+                              Potato___Late_blight       0.97      0.98      0.98       485
+                                  Potato___healthy       0.99      0.97      0.98       456
+                               Raspberry___healthy       0.98      1.00      0.99       445
+                                 Soybean___healthy       0.99      1.00      0.99       505
+                           Squash___Powdery_mildew       0.99      1.00      1.00       434
+                          Strawberry___Leaf_scorch       1.00      1.00      1.00       444
+                              Strawberry___healthy       1.00      1.00      1.00       456
+                           Tomato___Bacterial_spot       0.99      0.96      0.97       425
+                             Tomato___Early_blight       0.95      0.95      0.95       480
+                              Tomato___Late_blight       0.95      0.95      0.95       463
+                                Tomato___Leaf_Mold       0.99      0.99      0.99       470
+                       Tomato___Septoria_leaf_spot       0.99      0.93      0.96       436
+     Tomato___Spider_mites Two-spotted_spider_mite       0.98      0.98      0.98       435
+                              Tomato___Target_Spot       0.95      0.92      0.94       457
+            Tomato___Tomato_Yellow_Leaf_Curl_Virus       0.98      1.00      0.99       490
+                      Tomato___Tomato_mosaic_virus       0.99      1.00      0.99       448
+                                  Tomato___healthy       0.96      1.00      0.98       481
+
+                                          accuracy                           0.98     17572
+                                         macro avg       0.98      0.98      0.98     17572
+                                      weighted avg       0.98      0.98      0.98     17572
+
+Balanced accuracy score: 
+0.9834003766234095
+
+![Accuracy History](./images/custom/9_acc.png)
+
+![Loss History](./images/custom/9_loss.png)
+
+![LR History](./images/custom/9_lr.png)
+
+![Heatmap](./images/custom/9_heatmap.png)
