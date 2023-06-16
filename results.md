@@ -721,3 +721,132 @@ Balanced accuracy score:
 ![LR History](./images/custom/9_lr.png)
 
 ![Heatmap](./images/custom/9_heatmap.png)
+
+### RESNET 18
+
+Epoch [0], last_lr: 0.00812, train_loss: 1.5222, val_loss: 2.1334, val_acc: 0.4786
+Epoch [1], last_lr: 0.00000, train_loss: 0.4980, val_loss: 0.2209, val_acc: 0.9344
+CPU times: user 2h 15s, sys: 2h 6min 31s, total: 4h 6min 46s
+Wall time: 4h 6min 41s
+
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1         [-1, 64, 256, 256]           1,728
+       BatchNorm2d-2         [-1, 64, 256, 256]             128
+            Conv2d-3         [-1, 64, 256, 256]          36,864
+       BatchNorm2d-4         [-1, 64, 256, 256]             128
+            Conv2d-5         [-1, 64, 256, 256]          36,864
+       BatchNorm2d-6         [-1, 64, 256, 256]             128
+        BasicBlock-7         [-1, 64, 256, 256]               0
+            Conv2d-8         [-1, 64, 256, 256]          36,864
+       BatchNorm2d-9         [-1, 64, 256, 256]             128
+           Conv2d-10         [-1, 64, 256, 256]          36,864
+      BatchNorm2d-11         [-1, 64, 256, 256]             128
+       BasicBlock-12         [-1, 64, 256, 256]               0
+           Conv2d-13        [-1, 128, 128, 128]          73,728
+      BatchNorm2d-14        [-1, 128, 128, 128]             256
+           Conv2d-15        [-1, 128, 128, 128]         147,456
+      BatchNorm2d-16        [-1, 128, 128, 128]             256
+           Conv2d-17        [-1, 128, 128, 128]           8,192
+      BatchNorm2d-18        [-1, 128, 128, 128]             256
+       BasicBlock-19        [-1, 128, 128, 128]               0
+           Conv2d-20        [-1, 128, 128, 128]         147,456
+      BatchNorm2d-21        [-1, 128, 128, 128]             256
+           Conv2d-22        [-1, 128, 128, 128]         147,456
+      BatchNorm2d-23        [-1, 128, 128, 128]             256
+       BasicBlock-24        [-1, 128, 128, 128]               0
+           Conv2d-25          [-1, 256, 64, 64]         294,912
+      BatchNorm2d-26          [-1, 256, 64, 64]             512
+           Conv2d-27          [-1, 256, 64, 64]         589,824
+      BatchNorm2d-28          [-1, 256, 64, 64]             512
+           Conv2d-29          [-1, 256, 64, 64]          32,768
+      BatchNorm2d-30          [-1, 256, 64, 64]             512
+       BasicBlock-31          [-1, 256, 64, 64]               0
+           Conv2d-32          [-1, 256, 64, 64]         589,824
+      BatchNorm2d-33          [-1, 256, 64, 64]             512
+           Conv2d-34          [-1, 256, 64, 64]         589,824
+      BatchNorm2d-35          [-1, 256, 64, 64]             512
+       BasicBlock-36          [-1, 256, 64, 64]               0
+           Conv2d-37          [-1, 512, 32, 32]       1,179,648
+      BatchNorm2d-38          [-1, 512, 32, 32]           1,024
+           Conv2d-39          [-1, 512, 32, 32]       2,359,296
+      BatchNorm2d-40          [-1, 512, 32, 32]           1,024
+           Conv2d-41          [-1, 512, 32, 32]         131,072
+      BatchNorm2d-42          [-1, 512, 32, 32]           1,024
+       BasicBlock-43          [-1, 512, 32, 32]               0
+           Conv2d-44          [-1, 512, 32, 32]       2,359,296
+      BatchNorm2d-45          [-1, 512, 32, 32]           1,024
+           Conv2d-46          [-1, 512, 32, 32]       2,359,296
+      BatchNorm2d-47          [-1, 512, 32, 32]           1,024
+       BasicBlock-48          [-1, 512, 32, 32]               0
+           Linear-49                   [-1, 38]          19,494
+================================================================
+Total params: 11,188,326
+Trainable params: 11,188,326
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.75
+Forward/backward pass size (MB): 720.00
+Params size (MB): 42.68
+Estimated Total Size (MB): 763.43
+----------------------------------------------------------------
+None
+
+![Accuracy vs No Epochs](./images/custom/18_acc.png)
+
+![Loss vs No Epochs](./images/custom/18_loss.png)
+
+![Learning Rate vs Batch No](./images/custom/18_lr.png)
+
+Classification Report: 
+
+                                                    precision    recall  f1-score   support
+
+                                Apple___Apple_scab       0.94      0.95      0.95       504
+                                 Apple___Black_rot       0.97      0.96      0.97       497
+                          Apple___Cedar_apple_rust       0.95      0.92      0.93       440
+                                   Apple___healthy       0.88      0.94      0.91       502
+                               Blueberry___healthy       0.95      0.96      0.95       454
+          Cherry_(including_sour)___Powdery_mildew       0.91      0.96      0.93       421
+                 Cherry_(including_sour)___healthy       0.92      0.99      0.95       456
+Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot       0.98      0.82      0.89       410
+                       Corn_(maize)___Common_rust_       0.95      0.99      0.97       477
+               Corn_(maize)___Northern_Leaf_Blight       0.86      0.97      0.91       477
+                            Corn_(maize)___healthy       0.98      0.97      0.97       465
+                                 Grape___Black_rot       0.93      0.91      0.92       472
+                      Grape___Esca_(Black_Measles)       0.97      0.95      0.96       480
+        Grape___Leaf_blight_(Isariopsis_Leaf_Spot)       0.99      0.98      0.98       430
+                                   Grape___healthy       0.94      0.96      0.95       423
+          Orange___Haunglongbing_(Citrus_greening)       0.91      0.97      0.94       503
+                            Peach___Bacterial_spot       0.94      0.85      0.89       459
+                                   Peach___healthy       0.86      0.98      0.92       432
+                     Pepper,_bell___Bacterial_spot       0.93      0.94      0.93       478
+                            Pepper,_bell___healthy       0.93      0.86      0.89       497
+                             Potato___Early_blight       0.99      0.98      0.98       485
+                              Potato___Late_blight       0.89      0.91      0.90       485
+                                  Potato___healthy       0.95      0.91      0.93       456
+                               Raspberry___healthy       0.95      0.97      0.96       445
+                                 Soybean___healthy       0.94      0.93      0.93       505
+                           Squash___Powdery_mildew       0.96      0.98      0.97       434
+                          Strawberry___Leaf_scorch       0.98      0.99      0.99       444
+                              Strawberry___healthy       0.96      1.00      0.98       456
+                           Tomato___Bacterial_spot       0.92      0.91      0.91       425
+                             Tomato___Early_blight       0.89      0.84      0.87       480
+                              Tomato___Late_blight       0.85      0.75      0.80       463
+                                Tomato___Leaf_Mold       0.92      0.96      0.94       470
+                       Tomato___Septoria_leaf_spot       0.94      0.84      0.89       436
+     Tomato___Spider_mites Two-spotted_spider_mite       0.89      0.95      0.92       435
+                              Tomato___Target_Spot       0.94      0.87      0.90       457
+            Tomato___Tomato_Yellow_Leaf_Curl_Virus       0.95      0.97      0.96       490
+                      Tomato___Tomato_mosaic_virus       0.97      0.94      0.95       448
+                                  Tomato___healthy       0.97      0.98      0.98       481
+
+                                          accuracy                           0.93     17572
+                                         macro avg       0.94      0.93      0.93     17572
+                                      weighted avg       0.94      0.93      0.93     17572
+
+Balanced accuracy score: 
+0.9341941003488756
+
+![Confusion Matrix](./images/custom/18_heatmap.png)
