@@ -416,6 +416,319 @@ Balanced accuracy score:
 
 ![Heatmap](./images/pt_imagenet/50_heatmap.png)
 
+### EFFICIENTNETB0
+
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1         [-1, 32, 128, 128]             864
+       BatchNorm2d-2         [-1, 32, 128, 128]              64
+              SiLU-3         [-1, 32, 128, 128]               0
+            Conv2d-4         [-1, 32, 128, 128]             288
+       BatchNorm2d-5         [-1, 32, 128, 128]              64
+              SiLU-6         [-1, 32, 128, 128]               0
+ AdaptiveAvgPool2d-7             [-1, 32, 1, 1]               0
+            Conv2d-8              [-1, 8, 1, 1]             264
+              SiLU-9              [-1, 8, 1, 1]               0
+           Conv2d-10             [-1, 32, 1, 1]             288
+          Sigmoid-11             [-1, 32, 1, 1]               0
+SqueezeExcitation-12         [-1, 32, 128, 128]               0
+           Conv2d-13         [-1, 16, 128, 128]             512
+      BatchNorm2d-14         [-1, 16, 128, 128]              32
+           MBConv-15         [-1, 16, 128, 128]               0
+           Conv2d-16         [-1, 96, 128, 128]           1,536
+      BatchNorm2d-17         [-1, 96, 128, 128]             192
+             SiLU-18         [-1, 96, 128, 128]               0
+           Conv2d-19           [-1, 96, 64, 64]             864
+      BatchNorm2d-20           [-1, 96, 64, 64]             192
+             SiLU-21           [-1, 96, 64, 64]               0
+AdaptiveAvgPool2d-22             [-1, 96, 1, 1]               0
+           Conv2d-23              [-1, 4, 1, 1]             388
+             SiLU-24              [-1, 4, 1, 1]               0
+           Conv2d-25             [-1, 96, 1, 1]             480
+          Sigmoid-26             [-1, 96, 1, 1]               0
+SqueezeExcitation-27           [-1, 96, 64, 64]               0
+           Conv2d-28           [-1, 24, 64, 64]           2,304
+      BatchNorm2d-29           [-1, 24, 64, 64]              48
+           MBConv-30           [-1, 24, 64, 64]               0
+           Conv2d-31          [-1, 144, 64, 64]           3,456
+      BatchNorm2d-32          [-1, 144, 64, 64]             288
+             SiLU-33          [-1, 144, 64, 64]               0
+           Conv2d-34          [-1, 144, 64, 64]           1,296
+      BatchNorm2d-35          [-1, 144, 64, 64]             288
+             SiLU-36          [-1, 144, 64, 64]               0
+AdaptiveAvgPool2d-37            [-1, 144, 1, 1]               0
+           Conv2d-38              [-1, 6, 1, 1]             870
+             SiLU-39              [-1, 6, 1, 1]               0
+           Conv2d-40            [-1, 144, 1, 1]           1,008
+          Sigmoid-41            [-1, 144, 1, 1]               0
+SqueezeExcitation-42          [-1, 144, 64, 64]               0
+           Conv2d-43           [-1, 24, 64, 64]           3,456
+      BatchNorm2d-44           [-1, 24, 64, 64]              48
+  StochasticDepth-45           [-1, 24, 64, 64]               0
+           MBConv-46           [-1, 24, 64, 64]               0
+           Conv2d-47          [-1, 144, 64, 64]           3,456
+      BatchNorm2d-48          [-1, 144, 64, 64]             288
+             SiLU-49          [-1, 144, 64, 64]               0
+           Conv2d-50          [-1, 144, 32, 32]           3,600
+      BatchNorm2d-51          [-1, 144, 32, 32]             288
+             SiLU-52          [-1, 144, 32, 32]               0
+AdaptiveAvgPool2d-53            [-1, 144, 1, 1]               0
+           Conv2d-54              [-1, 6, 1, 1]             870
+             SiLU-55              [-1, 6, 1, 1]               0
+           Conv2d-56            [-1, 144, 1, 1]           1,008
+          Sigmoid-57            [-1, 144, 1, 1]               0
+SqueezeExcitation-58          [-1, 144, 32, 32]               0
+           Conv2d-59           [-1, 40, 32, 32]           5,760
+      BatchNorm2d-60           [-1, 40, 32, 32]              80
+           MBConv-61           [-1, 40, 32, 32]               0
+           Conv2d-62          [-1, 240, 32, 32]           9,600
+      BatchNorm2d-63          [-1, 240, 32, 32]             480
+             SiLU-64          [-1, 240, 32, 32]               0
+           Conv2d-65          [-1, 240, 32, 32]           6,000
+      BatchNorm2d-66          [-1, 240, 32, 32]             480
+             SiLU-67          [-1, 240, 32, 32]               0
+AdaptiveAvgPool2d-68            [-1, 240, 1, 1]               0
+           Conv2d-69             [-1, 10, 1, 1]           2,410
+             SiLU-70             [-1, 10, 1, 1]               0
+           Conv2d-71            [-1, 240, 1, 1]           2,640
+          Sigmoid-72            [-1, 240, 1, 1]               0
+SqueezeExcitation-73          [-1, 240, 32, 32]               0
+           Conv2d-74           [-1, 40, 32, 32]           9,600
+      BatchNorm2d-75           [-1, 40, 32, 32]              80
+  StochasticDepth-76           [-1, 40, 32, 32]               0
+           MBConv-77           [-1, 40, 32, 32]               0
+           Conv2d-78          [-1, 240, 32, 32]           9,600
+      BatchNorm2d-79          [-1, 240, 32, 32]             480
+             SiLU-80          [-1, 240, 32, 32]               0
+           Conv2d-81          [-1, 240, 16, 16]           2,160
+      BatchNorm2d-82          [-1, 240, 16, 16]             480
+             SiLU-83          [-1, 240, 16, 16]               0
+AdaptiveAvgPool2d-84            [-1, 240, 1, 1]               0
+           Conv2d-85             [-1, 10, 1, 1]           2,410
+             SiLU-86             [-1, 10, 1, 1]               0
+           Conv2d-87            [-1, 240, 1, 1]           2,640
+          Sigmoid-88            [-1, 240, 1, 1]               0
+SqueezeExcitation-89          [-1, 240, 16, 16]               0
+           Conv2d-90           [-1, 80, 16, 16]          19,200
+      BatchNorm2d-91           [-1, 80, 16, 16]             160
+           MBConv-92           [-1, 80, 16, 16]               0
+           Conv2d-93          [-1, 480, 16, 16]          38,400
+      BatchNorm2d-94          [-1, 480, 16, 16]             960
+             SiLU-95          [-1, 480, 16, 16]               0
+           Conv2d-96          [-1, 480, 16, 16]           4,320
+      BatchNorm2d-97          [-1, 480, 16, 16]             960
+             SiLU-98          [-1, 480, 16, 16]               0
+AdaptiveAvgPool2d-99            [-1, 480, 1, 1]               0
+          Conv2d-100             [-1, 20, 1, 1]           9,620
+            SiLU-101             [-1, 20, 1, 1]               0
+          Conv2d-102            [-1, 480, 1, 1]          10,080
+         Sigmoid-103            [-1, 480, 1, 1]               0
+SqueezeExcitation-104          [-1, 480, 16, 16]               0
+          Conv2d-105           [-1, 80, 16, 16]          38,400
+     BatchNorm2d-106           [-1, 80, 16, 16]             160
+ StochasticDepth-107           [-1, 80, 16, 16]               0
+          MBConv-108           [-1, 80, 16, 16]               0
+          Conv2d-109          [-1, 480, 16, 16]          38,400
+     BatchNorm2d-110          [-1, 480, 16, 16]             960
+            SiLU-111          [-1, 480, 16, 16]               0
+          Conv2d-112          [-1, 480, 16, 16]           4,320
+     BatchNorm2d-113          [-1, 480, 16, 16]             960
+            SiLU-114          [-1, 480, 16, 16]               0
+AdaptiveAvgPool2d-115            [-1, 480, 1, 1]               0
+          Conv2d-116             [-1, 20, 1, 1]           9,620
+            SiLU-117             [-1, 20, 1, 1]               0
+          Conv2d-118            [-1, 480, 1, 1]          10,080
+         Sigmoid-119            [-1, 480, 1, 1]               0
+SqueezeExcitation-120          [-1, 480, 16, 16]               0
+          Conv2d-121           [-1, 80, 16, 16]          38,400
+     BatchNorm2d-122           [-1, 80, 16, 16]             160
+ StochasticDepth-123           [-1, 80, 16, 16]               0
+          MBConv-124           [-1, 80, 16, 16]               0
+          Conv2d-125          [-1, 480, 16, 16]          38,400
+     BatchNorm2d-126          [-1, 480, 16, 16]             960
+            SiLU-127          [-1, 480, 16, 16]               0
+          Conv2d-128          [-1, 480, 16, 16]          12,000
+     BatchNorm2d-129          [-1, 480, 16, 16]             960
+            SiLU-130          [-1, 480, 16, 16]               0
+AdaptiveAvgPool2d-131            [-1, 480, 1, 1]               0
+          Conv2d-132             [-1, 20, 1, 1]           9,620
+            SiLU-133             [-1, 20, 1, 1]               0
+          Conv2d-134            [-1, 480, 1, 1]          10,080
+         Sigmoid-135            [-1, 480, 1, 1]               0
+SqueezeExcitation-136          [-1, 480, 16, 16]               0
+          Conv2d-137          [-1, 112, 16, 16]          53,760
+     BatchNorm2d-138          [-1, 112, 16, 16]             224
+          MBConv-139          [-1, 112, 16, 16]               0
+          Conv2d-140          [-1, 672, 16, 16]          75,264
+     BatchNorm2d-141          [-1, 672, 16, 16]           1,344
+            SiLU-142          [-1, 672, 16, 16]               0
+          Conv2d-143          [-1, 672, 16, 16]          16,800
+     BatchNorm2d-144          [-1, 672, 16, 16]           1,344
+            SiLU-145          [-1, 672, 16, 16]               0
+AdaptiveAvgPool2d-146            [-1, 672, 1, 1]               0
+          Conv2d-147             [-1, 28, 1, 1]          18,844
+            SiLU-148             [-1, 28, 1, 1]               0
+          Conv2d-149            [-1, 672, 1, 1]          19,488
+         Sigmoid-150            [-1, 672, 1, 1]               0
+SqueezeExcitation-151          [-1, 672, 16, 16]               0
+          Conv2d-152          [-1, 112, 16, 16]          75,264
+     BatchNorm2d-153          [-1, 112, 16, 16]             224
+ StochasticDepth-154          [-1, 112, 16, 16]               0
+          MBConv-155          [-1, 112, 16, 16]               0
+          Conv2d-156          [-1, 672, 16, 16]          75,264
+     BatchNorm2d-157          [-1, 672, 16, 16]           1,344
+            SiLU-158          [-1, 672, 16, 16]               0
+          Conv2d-159          [-1, 672, 16, 16]          16,800
+     BatchNorm2d-160          [-1, 672, 16, 16]           1,344
+            SiLU-161          [-1, 672, 16, 16]               0
+AdaptiveAvgPool2d-162            [-1, 672, 1, 1]               0
+          Conv2d-163             [-1, 28, 1, 1]          18,844
+            SiLU-164             [-1, 28, 1, 1]               0
+          Conv2d-165            [-1, 672, 1, 1]          19,488
+         Sigmoid-166            [-1, 672, 1, 1]               0
+SqueezeExcitation-167          [-1, 672, 16, 16]               0
+          Conv2d-168          [-1, 112, 16, 16]          75,264
+     BatchNorm2d-169          [-1, 112, 16, 16]             224
+ StochasticDepth-170          [-1, 112, 16, 16]               0
+          MBConv-171          [-1, 112, 16, 16]               0
+          Conv2d-172          [-1, 672, 16, 16]          75,264
+     BatchNorm2d-173          [-1, 672, 16, 16]           1,344
+            SiLU-174          [-1, 672, 16, 16]               0
+          Conv2d-175            [-1, 672, 8, 8]          16,800
+     BatchNorm2d-176            [-1, 672, 8, 8]           1,344
+            SiLU-177            [-1, 672, 8, 8]               0
+AdaptiveAvgPool2d-178            [-1, 672, 1, 1]               0
+          Conv2d-179             [-1, 28, 1, 1]          18,844
+            SiLU-180             [-1, 28, 1, 1]               0
+          Conv2d-181            [-1, 672, 1, 1]          19,488
+         Sigmoid-182            [-1, 672, 1, 1]               0
+SqueezeExcitation-183            [-1, 672, 8, 8]               0
+          Conv2d-184            [-1, 192, 8, 8]         129,024
+     BatchNorm2d-185            [-1, 192, 8, 8]             384
+          MBConv-186            [-1, 192, 8, 8]               0
+          Conv2d-187           [-1, 1152, 8, 8]         221,184
+     BatchNorm2d-188           [-1, 1152, 8, 8]           2,304
+            SiLU-189           [-1, 1152, 8, 8]               0
+          Conv2d-190           [-1, 1152, 8, 8]          28,800
+     BatchNorm2d-191           [-1, 1152, 8, 8]           2,304
+            SiLU-192           [-1, 1152, 8, 8]               0
+AdaptiveAvgPool2d-193           [-1, 1152, 1, 1]               0
+          Conv2d-194             [-1, 48, 1, 1]          55,344
+            SiLU-195             [-1, 48, 1, 1]               0
+          Conv2d-196           [-1, 1152, 1, 1]          56,448
+         Sigmoid-197           [-1, 1152, 1, 1]               0
+SqueezeExcitation-198           [-1, 1152, 8, 8]               0
+          Conv2d-199            [-1, 192, 8, 8]         221,184
+     BatchNorm2d-200            [-1, 192, 8, 8]             384
+ StochasticDepth-201            [-1, 192, 8, 8]               0
+          MBConv-202            [-1, 192, 8, 8]               0
+          Conv2d-203           [-1, 1152, 8, 8]         221,184
+     BatchNorm2d-204           [-1, 1152, 8, 8]           2,304
+            SiLU-205           [-1, 1152, 8, 8]               0
+          Conv2d-206           [-1, 1152, 8, 8]          28,800
+     BatchNorm2d-207           [-1, 1152, 8, 8]           2,304
+            SiLU-208           [-1, 1152, 8, 8]               0
+AdaptiveAvgPool2d-209           [-1, 1152, 1, 1]               0
+          Conv2d-210             [-1, 48, 1, 1]          55,344
+            SiLU-211             [-1, 48, 1, 1]               0
+          Conv2d-212           [-1, 1152, 1, 1]          56,448
+         Sigmoid-213           [-1, 1152, 1, 1]               0
+SqueezeExcitation-214           [-1, 1152, 8, 8]               0
+          Conv2d-215            [-1, 192, 8, 8]         221,184
+     BatchNorm2d-216            [-1, 192, 8, 8]             384
+ StochasticDepth-217            [-1, 192, 8, 8]               0
+          MBConv-218            [-1, 192, 8, 8]               0
+          Conv2d-219           [-1, 1152, 8, 8]         221,184
+     BatchNorm2d-220           [-1, 1152, 8, 8]           2,304
+            SiLU-221           [-1, 1152, 8, 8]               0
+          Conv2d-222           [-1, 1152, 8, 8]          28,800
+     BatchNorm2d-223           [-1, 1152, 8, 8]           2,304
+            SiLU-224           [-1, 1152, 8, 8]               0
+AdaptiveAvgPool2d-225           [-1, 1152, 1, 1]               0
+          Conv2d-226             [-1, 48, 1, 1]          55,344
+            SiLU-227             [-1, 48, 1, 1]               0
+          Conv2d-228           [-1, 1152, 1, 1]          56,448
+         Sigmoid-229           [-1, 1152, 1, 1]               0
+SqueezeExcitation-230           [-1, 1152, 8, 8]               0
+          Conv2d-231            [-1, 192, 8, 8]         221,184
+     BatchNorm2d-232            [-1, 192, 8, 8]             384
+ StochasticDepth-233            [-1, 192, 8, 8]               0
+          MBConv-234            [-1, 192, 8, 8]               0
+          Conv2d-235           [-1, 1152, 8, 8]         221,184
+     BatchNorm2d-236           [-1, 1152, 8, 8]           2,304
+            SiLU-237           [-1, 1152, 8, 8]               0
+          Conv2d-238           [-1, 1152, 8, 8]          10,368
+     BatchNorm2d-239           [-1, 1152, 8, 8]           2,304
+            SiLU-240           [-1, 1152, 8, 8]               0
+AdaptiveAvgPool2d-241           [-1, 1152, 1, 1]               0
+          Conv2d-242             [-1, 48, 1, 1]          55,344
+            SiLU-243             [-1, 48, 1, 1]               0
+          Conv2d-244           [-1, 1152, 1, 1]          56,448
+         Sigmoid-245           [-1, 1152, 1, 1]               0
+SqueezeExcitation-246           [-1, 1152, 8, 8]               0
+          Conv2d-247            [-1, 320, 8, 8]         368,640
+     BatchNorm2d-248            [-1, 320, 8, 8]             640
+          MBConv-249            [-1, 320, 8, 8]               0
+          Conv2d-250           [-1, 1280, 8, 8]         409,600
+     BatchNorm2d-251           [-1, 1280, 8, 8]           2,560
+            SiLU-252           [-1, 1280, 8, 8]               0
+AdaptiveAvgPool2d-253           [-1, 1280, 1, 1]               0
+         Dropout-254                 [-1, 1280]               0
+          Linear-255                   [-1, 38]          48,678
+================================================================
+Total params: 4,056,226
+Trainable params: 48,678
+Non-trainable params: 4,007,548
+----------------------------------------------------------------
+Input size (MB): 0.75
+Forward/backward pass size (MB): 226.73
+Params size (MB): 15.47
+Estimated Total Size (MB): 242.95
+----------------------------------------------------------------
+None
+
+Epoch [0], last_lr: 0.00812, train_loss: 0.5666, val_loss: 0.1738, val_acc: 0.9509
+Epoch [1], last_lr: 0.00000, train_loss: 0.2124, val_loss: 0.0984, val_acc: 0.9701
+CPU times: user 6min 23s, sys: 3min 8s, total: 9min 31s
+Wall time: 8min 10s
+
+![acc](./images/pt_imagenet/efb0_acc.png)
+
+![loss](./images/pt_imagenet/efb0_loss.png)
+
+![lr](./images/pt_imagenet/efb0_lr.png)
+
+Classification Report: 
+
+                                                    precision    recall  f1-score   support
+
+                                Apple___Apple_scab       0.97      0.95      0.96       504
+                                 Apple___Black_rot       0.97      0.99      0.98       497
+                          Apple___Cedar_apple_rust       0.98      0.98      0.98       440
+                                   Apple___healthy       0.97      0.98      0.97       502
+                               Blueberry___healthy       0.97      1.00      0.98       454
+          Cherry_(including_sour)___Powdery_mildew       0.98      0.99      0.99       421
+                 Cherry_(including_sour)___healthy       0.99      1.00      0.99       456
+Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot       0.94      0.91      0.92       410
+                       Corn_(maize)___Common_rust_       1.00      1.00      1.00       477
+               Corn_(maize)___Northern_Leaf_Blight       0.92      0.94      0.93       477
+                            Corn_(maize)___healthy       1.00      1.00      1.00       465
+                                 Grape___Black_rot       0.97      0.98      0.97       472
+                      Grape___Esca_(Black_Measles)       0.98      0.98      0.98       480
+        Grape___Leaf_blight_(Isariopsis_Leaf_Spot)       1.00      0.99      0.99       430
+                                   Grape___healthy       0.99      0.99      0.99       423
+          Orange___Haunglongbing_(Citrus_greening)       0.99      1.00      1.00       503
+                            Peach___Bacterial_spot       0.98      0.97      0.97       459
+                                   Peach___healthy       0.99      0.99      0.99       432
+                     Pepper,_bell___Bacterial_spot       0.97      0.98      0.98       478
+                            Pepper,_bell___healthy       0.96      0.98      0.97       497
+                             Potato___Early_blight       0.99      0.96      0.98       485
+...
+0.9616137639365037
+
+![confusion matrix](./images/pt_imagenet/efb0_heatmap.png)
+
 ## PRE-TRAINED WITH PLANT DATASET
 
 ### RESNET 34
