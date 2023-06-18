@@ -142,6 +142,68 @@ Balanced accuracy score:
 
 #### Weight Decay 1e-3 (4)
 
+Epoch [0], last_lr: 0.00081, train_loss: 1.3363, val_loss: 1.0431, val_acc: 0.7080
+Epoch [1], last_lr: 0.00000, train_loss: 0.4515, val_loss: 0.1512, val_acc: 0.9611
+CPU times: user 1h 34min 4s, sys: 1h 47min 8s, total: 3h 21min 12s
+Wall time: 3h 20min 42s
+
+![acc](image.png)
+
+![loss](image-1.png)
+
+![lr](image-2.png)
+
+Classification Report: 
+
+                                                    precision    recall  f1-score   support
+
+                                Apple___Apple_scab       0.96      0.98      0.97       504
+                                 Apple___Black_rot       0.99      0.97      0.98       497
+                          Apple___Cedar_apple_rust       0.96      0.98      0.97       440
+                                   Apple___healthy       0.95      0.98      0.97       502
+                               Blueberry___healthy       0.96      0.99      0.97       454
+          Cherry_(including_sour)___Powdery_mildew       0.96      0.95      0.95       421
+                 Cherry_(including_sour)___healthy       0.96      1.00      0.98       456
+Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot       0.97      0.89      0.92       410
+                       Corn_(maize)___Common_rust_       0.95      0.99      0.97       477
+               Corn_(maize)___Northern_Leaf_Blight       0.90      0.96      0.93       477
+                            Corn_(maize)___healthy       0.99      0.98      0.99       465
+                                 Grape___Black_rot       0.97      0.96      0.96       472
+                      Grape___Esca_(Black_Measles)       0.98      0.97      0.98       480
+        Grape___Leaf_blight_(Isariopsis_Leaf_Spot)       1.00      0.98      0.99       430
+                                   Grape___healthy       0.97      0.99      0.98       423
+          Orange___Haunglongbing_(Citrus_greening)       0.95      0.98      0.97       503
+                            Peach___Bacterial_spot       1.00      0.97      0.98       459
+                                   Peach___healthy       0.96      0.99      0.97       432
+                     Pepper,_bell___Bacterial_spot       0.96      0.99      0.97       478
+                            Pepper,_bell___healthy       0.99      0.95      0.97       497
+                             Potato___Early_blight       1.00      0.99      0.99       485
+                              Potato___Late_blight       0.92      0.95      0.94       485
+                                  Potato___healthy       0.98      0.97      0.97       456
+                               Raspberry___healthy       0.98      0.97      0.97       445
+                                 Soybean___healthy       0.98      0.96      0.97       505
+                           Squash___Powdery_mildew       0.98      1.00      0.99       434
+                          Strawberry___Leaf_scorch       0.98      0.99      0.99       444
+                              Strawberry___healthy       0.97      1.00      0.98       456
+                           Tomato___Bacterial_spot       0.94      0.91      0.93       425
+                             Tomato___Early_blight       0.92      0.87      0.89       480
+                              Tomato___Late_blight       0.90      0.75      0.82       463
+                                Tomato___Leaf_Mold       0.91      0.99      0.95       470
+                       Tomato___Septoria_leaf_spot       0.97      0.93      0.95       436
+     Tomato___Spider_mites Two-spotted_spider_mite       0.90      0.98      0.94       435
+                              Tomato___Target_Spot       0.95      0.89      0.92       457
+            Tomato___Tomato_Yellow_Leaf_Curl_Virus       0.97      0.97      0.97       490
+                      Tomato___Tomato_mosaic_virus       0.98      1.00      0.99       448
+                                  Tomato___healthy       0.97      0.99      0.98       481
+
+                                          accuracy                           0.96     17572
+                                         macro avg       0.96      0.96      0.96     17572
+                                      weighted avg       0.96      0.96      0.96     17572
+
+Balanced accuracy score: 
+0.9609258795058804
+
+![cm](image-3.png)
 
 ### LR 0.1
 
