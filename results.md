@@ -729,6 +729,71 @@ Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot       0.94      0.91      0.9
 
 ![confusion matrix](./images/pt_imagenet/efb0_heatmap.png)
 
+### EFFICIENTNET B2
+
+Epoch [0], last_lr: 0.00812, train_loss: 0.6900, val_loss: 0.2414, val_acc: 0.9328
+Epoch [1], last_lr: 0.00000, train_loss: 0.3479, val_loss: 0.1389, val_acc: 0.9588
+CPU times: total: 1min 23s
+Wall time: 6min 10s
+
+Classification Report: 
+
+                                                    precision    recall  f1-score   support
+
+                                Apple___Apple_scab       0.95      0.94      0.95       504
+                                 Apple___Black_rot       0.99      0.98      0.98       497
+                          Apple___Cedar_apple_rust       0.97      0.97      0.97       440
+                                   Apple___healthy       0.97      0.96      0.96       502
+                               Blueberry___healthy       0.98      0.98      0.98       454
+          Cherry_(including_sour)___Powdery_mildew       0.98      0.98      0.98       421
+                 Cherry_(including_sour)___healthy       1.00      0.99      1.00       456
+Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot       0.87      0.92      0.90       410
+                       Corn_(maize)___Common_rust_       0.99      0.99      0.99       477
+               Corn_(maize)___Northern_Leaf_Blight       0.93      0.89      0.91       477
+                            Corn_(maize)___healthy       1.00      0.99      0.99       465
+                                 Grape___Black_rot       0.97      0.98      0.97       472
+                      Grape___Esca_(Black_Measles)       0.98      0.97      0.98       480
+        Grape___Leaf_blight_(Isariopsis_Leaf_Spot)       0.97      1.00      0.99       430
+                                   Grape___healthy       0.99      1.00      0.99       423
+          Orange___Haunglongbing_(Citrus_greening)       0.99      1.00      1.00       503
+                            Peach___Bacterial_spot       0.97      0.96      0.96       459
+                                   Peach___healthy       0.97      0.99      0.98       432
+                     Pepper,_bell___Bacterial_spot       0.98      0.97      0.98       478
+                            Pepper,_bell___healthy       0.94      0.98      0.96       497
+                             Potato___Early_blight       0.98      0.98      0.98       485
+                              Potato___Late_blight       0.94      0.96      0.95       485
+                                  Potato___healthy       0.98      0.96      0.97       456
+                               Raspberry___healthy       0.99      0.99      0.99       445
+                                 Soybean___healthy       0.98      0.98      0.98       505
+                           Squash___Powdery_mildew       0.99      0.99      0.99       434
+                          Strawberry___Leaf_scorch       1.00      0.99      0.99       444
+                              Strawberry___healthy       0.99      0.99      0.99       456
+                           Tomato___Bacterial_spot       0.92      0.96      0.94       425
+                             Tomato___Early_blight       0.89      0.84      0.86       480
+                              Tomato___Late_blight       0.92      0.85      0.88       463
+                                Tomato___Leaf_Mold       0.95      0.92      0.93       470
+                       Tomato___Septoria_leaf_spot       0.88      0.88      0.88       436
+     Tomato___Spider_mites Two-spotted_spider_mite       0.89      0.93      0.91       435
+                              Tomato___Target_Spot       0.85      0.85      0.85       457
+            Tomato___Tomato_Yellow_Leaf_Curl_Virus       0.97      0.97      0.97       490
+                      Tomato___Tomato_mosaic_virus       0.95      0.98      0.97       448
+                                  Tomato___healthy       0.94      0.96      0.95       481
+
+                                          accuracy                           0.96     17572
+                                         macro avg       0.96      0.96      0.96     17572
+                                      weighted avg       0.96      0.96      0.96     17572
+
+Balanced accuracy score: 
+0.9587194120268513
+
+![acc](./images/pt_imagenet/efb2_acc.png)
+
+![loss](./images/pt_imagenet/efb2_loss.png)
+
+![lr](./images/pt_imagenet/efb2_lr.png)
+
+![confusion matrix](./images/pt_imagenet/efb2_heatmap.png)
+
 ## PRE-TRAINED WITH PLANT DATASET
 
 ### RESNET 34
