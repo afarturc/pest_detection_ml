@@ -75,11 +75,11 @@ Epoch [1], last_lr: 0.00000, train_loss: 0.3286, val_loss: 0.0958, val_acc: 0.97
 CPU times: user 1h 37min 58s, sys: 1h 47min 29s, total: 3h 25min 28s
 Wall time: 3h 24min 58s
 
-![acc](image.png)
+![acc](./images/custom/18_tuning_3_acc.png)
 
-![loss](image-1.png)
+![loss](./images/custom/18_tuning_3_loss.png)
 
-![lr](image-2.png)
+![lr](./images/custom/18_tuning_3_lr.png)
 
 CPU times: user 8min 4s, sys: 3.48 s, total: 8min 7s
 Wall time: 8min 2s
@@ -138,7 +138,7 @@ Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot       0.98      0.82      0.8
 Balanced accuracy score: 
 0.9341941003488756
 
-![cm](image-3.png)
+![cm](./images/custom/18_tuning_3_confusion.png)
 
 #### Weight Decay 1e-3 (4)
 
@@ -147,11 +147,11 @@ Epoch [1], last_lr: 0.00000, train_loss: 0.4515, val_loss: 0.1512, val_acc: 0.96
 CPU times: user 1h 34min 4s, sys: 1h 47min 8s, total: 3h 21min 12s
 Wall time: 3h 20min 42s
 
-![acc](image.png)
+![acc](./images/custom/18_tuning_4_acc.png)
 
-![loss](image-1.png)
+![loss](./images/custom/18_tuning_4_loss.png)
 
-![lr](image-2.png)
+![lr](./images/custom/18_tuning_4_lr.png)
 
 Classification Report: 
 
@@ -203,7 +203,7 @@ Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot       0.97      0.89      0.9
 Balanced accuracy score: 
 0.9609258795058804
 
-![cm](image-3.png)
+![cm](./images/custom/18_tuning_4_confusion.png)
 
 ### LR 0.1
 
